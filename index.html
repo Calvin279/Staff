@@ -1,0 +1,47 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Servicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Servicio</h1>
+        
+        <form id="serviceForm">
+            <input type="text" id="nombreInput" placeholder="Nombre" required>
+            <input type="date" id="fechaInput" required>
+            <input type="text" id="rangoInput" placeholder="Rango" required>
+            
+            <div class="buttons">
+                <button type="button" id="iniciarServicio">Iniciar Servicio</button>
+                <button type="button" id="finalizarServicio" disabled>Finalizar Servicio</button>
+            </div>
+        </form>
+
+        <div class="search-container">
+            <input type="text" id="buscarInput" placeholder="Buscar por nombre">
+            <button id="buscarButton">Buscar</button>
+        </div>
+
+        <table id="servicioTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Rango</th>
+                    <th>Hora Inicio</th>
+                    <th>Hora Fin</th>
+                    <th>Tiempo Total</th>
+                    <th>Horas Semanales</th>
+                </tr>
+            </thead>
+            <tbody id="servicioTableBody">
+                <!-- Registros se agregarán dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
